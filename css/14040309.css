@@ -113,3 +113,124 @@ form.loginF .inputs .inputMe{
 .deletL{
    display: none;
 }
+
+/* استایل کلی باکس تایمر */
+#timer2 {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* گرادیانت تیره */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 20px auto;
+    /*max-width: 400px;*/
+    font-family: 'Courier New', monospace;
+    color: #ecf0f1;
+}
+
+/* استایل باکس‌های ساعت، دقیقه و ثانیه */
+#hour1, #minute1, #second1 {
+    font-size: 2.5em;
+    background: #ffffff;
+    color: #2c3e50;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* انیمیشن پالس موقع تغییر اعداد */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#hour1.changed, #minute1.changed, #second1.changed {
+    animation: pulse 0.3s ease-in-out;
+}
+
+/* استایل دکمه‌ها */
+.buttoms {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* فاصله بیشتر بین دکمه‌ها */
+}
+
+.buttoms button {
+    font-size: 1.2em;
+    padding: 12px 32px; /* پدینگ افقی بیشتر برای عرض بزرگ‌تر */
+    min-width: 120px; /* عرض حداقل برای دکمه‌ها */
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    color: #ecf0f1; /* متن سفید برای خوانایی */
+}
+
+/* افکت هاور */
+.buttoms button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* افکت کلیک */
+.buttoms button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* انیمیشن موج برای هاور */
+.buttoms button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2); /* موج کمی تیره‌تر برای هماهنگی */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.buttoms button:hover::before {
+    width: 250px; /* بزرگ‌تر برای دکمه‌های عریض‌تر */
+    height: 250px;
+}
+
+/* رنگ‌بندی دکمه‌ها (تیره و هماهنگ با تایمر) */
+#startbtn {
+    background: linear-gradient(45deg, #2c3e50, #27ae60); /* سبز تیره هماهنگ با تایمر */
+}
+
+#stopbtn {
+    background: linear-gradient(45deg, #2c3e50, #c0392b); /* قرمز تیره هماهنگ با تایمر */
+}
+
+#resetbtn {
+    background: linear-gradient(45deg, #2c3e50, #2980b9); /* آبی تیره هماهنگ با تایمر */
+}
+
+/* حالت غیرفعال */
+.buttoms button:disabled {
+    opacity: 0.4; /* کمی تیره‌تر برای هماهنگی */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* انیمیشن برای کلیک روی دکمه */
+@keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.buttoms button:not(:disabled):active {
+    animation: buttonPulse 0.2s ease-in-out;
+}
