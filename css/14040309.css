@@ -1,0 +1,115 @@
+
+#myInput{
+    height: 500px;
+}
+
+.formP{
+    margin:10px 0px 25px 20px;
+    color: royalblue;
+}
+
+.loginF .inputs{
+    height: 300px;
+    margin-bottom: 5px;
+}
+
+form.loginF .inputs .inputMe{
+    margin:10px 0px 25px 20px;
+    width: 90%;
+    padding: 8px;
+}
+
+/*form.loginF .inputs input:not(:nth-last-child(n-2)){*/
+/*    margin:10px 0px 25px 20px;*/
+/*    width: 90%;*/
+/*    padding: 8px;*/
+/*}*/
+
+
+/*.loginF .inputs span {*/
+/*    margin-left: 10px;*/
+/*}*/
+
+.loginF .butt{
+    height: 50px;
+    text-align: center;
+    padding-top: 80px;
+
+}
+
+.loginF .butt button {
+
+    width: 93%;
+
+}
+
+#myPic{
+    height: 500px;
+    text-align: center;
+}
+
+#myPic img{
+    height: 450px;
+}
+
+/*.radioF{*/
+/*    display: inline-block;*/
+/*}*/
+
+.radioMe{
+    position: relative;
+    height: 30px;
+    width: 90%;
+    margin-left: 20px;
+    border: solid 1px darkgray;
+}
+
+.radioMe .radioF{
+    position: absolute;
+    right: 20%;
+}
+.radioMe .radioM{
+    position: absolute;
+    left: 20%;
+}
+
+.selectMe{
+    margin: 25px 0 0 0;
+    text-align: center;
+
+}
+
+.selectMe select{
+   width: 90%;
+    margin-right:15px;
+
+}
+
+#mydate{
+    width: 97%;
+    border:solid 2px darkgray;
+}
+
+.green{
+    background-color: mediumspringgreen!important;
+}
+
+
+#tasks li{
+    list-style-type: none;
+    border: solid 1px seagreen;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color:cornflowerblue ;
+    position: relative;
+    transition: background-color 2s;
+}
+
+.positionB{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.deletL{
+   display: none;
+}
